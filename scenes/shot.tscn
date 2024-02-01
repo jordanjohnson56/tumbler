@@ -8,7 +8,6 @@ radius = 32.0
 
 [node name="Shot" type="RigidBody2D" groups=["shot"]]
 script = ExtResource("1_tdtkl")
-launch_force = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_opwlc")

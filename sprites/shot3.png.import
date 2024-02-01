@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy7c2udfxcck8"
-path="res://.godot/imported/ball.svg-d0e83dd89ebdb371ee6e424ff26a12c2.ctex"
+uid="uid://devjucmbftyct"
+path="res://.godot/imported/shot3.png-f43ec6d3fc78d7f546c3088d6b6e0e9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ball.svg"
-dest_files=["res://.godot/imported/ball.svg-d0e83dd89ebdb371ee6e424ff26a12c2.ctex"]
+source_file="res://sprites/shot3.png"
+dest_files=["res://.godot/imported/shot3.png-f43ec6d3fc78d7f546c3088d6b6e0e9e.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

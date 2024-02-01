@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8264sypcw2wj"]
+[gd_scene load_steps=6 format=3 uid="uid://c8264sypcw2wj"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_l7to6"]
 [ext_resource type="Texture2D" uid="uid://chtnrh13e82f0" path="res://sprites/shot2.png" id="2_1jclp"]
+[ext_resource type="PackedScene" uid="uid://c7hm80cke0cg8" path="res://scenes/shot.tscn" id="2_gniki"]
+[ext_resource type="Texture2D" uid="uid://devjucmbftyct" path="res://sprites/shot3.png" id="4_jm7hj"]
 
 [sub_resource type="Curve2D" id="Curve2D_q6ord"]
 _data = {
@@ -11,6 +13,9 @@ point_count = 3
 
 [node name="Player" type="Node"]
 script = ExtResource("1_l7to6")
+shot_scene = ExtResource("2_gniki")
+ready_sprite = ExtResource("2_1jclp")
+cooldown_sprite = ExtResource("4_jm7hj")
 
 [node name="ShotPath" type="Path2D" parent="."]
 position = Vector2(250, 100)
@@ -22,3 +27,6 @@ curve = SubResource("Curve2D_q6ord")
 texture = ExtResource("2_1jclp")
 
 [node name="ShotCooldown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="ShotCooldown" to="." method="_on_shot_cooldown_timeout"]
