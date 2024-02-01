@@ -1,19 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bn2hag78moeq0"]
+[gd_scene load_steps=3 format=3 uid="uid://bn2hag78moeq0"]
 
-[ext_resource type="Script" path="res://scenes/peg.gd" id="1_5xpk4"]
-[ext_resource type="Texture2D" uid="uid://cctwrlb6i28uc" path="res://sprites/peg.svg" id="1_ruu4v"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_me55p"]
-radius = 24.0
+[ext_resource type="Script" path="res://scripts/peg.gd" id="1_f8nxj"]
+[ext_resource type="Texture2D" uid="uid://bduuhx75mvsaq" path="res://sprites/peg2.png" id="2_82kgb"]
 
 [node name="Peg" type="Area2D"]
-script = ExtResource("1_5xpk4")
+script = ExtResource("1_f8nxj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_ruu4v")
+texture = ExtResource("2_82kgb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_me55p")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, -8, -8, -32, 9, -32, 32, -9, 32, 10, 10, 32, -9, 32, -32, 9)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
