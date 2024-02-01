@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0gp3i44p568s"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_hrepe"]
+[ext_resource type="PackedScene" uid="uid://c7hm80cke0cg8" path="res://scenes/shot.tscn" id="2_63pc5"]
+[ext_resource type="PackedScene" uid="uid://bn2hag78moeq0" path="res://scenes/peg.tscn" id="3_iiaqr"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_hrepe")
+shot_scene = ExtResource("2_63pc5")
+peg_scene = ExtResource("3_iiaqr")
+
+[node name="TestShotTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="timeout" from="TestShotTimer" to="." method="_on_test_shot_timer_timeout"]
